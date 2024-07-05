@@ -20,10 +20,13 @@ function App() {
       <VariousInputs />
       <StopPropagation />
       <EventBubbling />
+
+      {/*       
       <DispatchEvent />
       <ReactOnClick />
       <OnClick />
       <EventListenter />
+      */}
     </div>
   )
 }
