@@ -1,20 +1,11 @@
-import { Component, ReactNode } from 'react'
+import ClassComponent from './ClassComponent'
+import ArrowComponent from './ArrowComponent'
 
-export default class App extends Component {
-  render() {
-    const isLoading = true
-    if (isLoading) {
-      return <div>Loading...</div>
-    }
-
-    return (
-      <ul>
-        <li>
-          <a href="http://www.google.com">
-            <p>go to Google</p>
-          </a>
-        </li>
-      </ul>
-    )
-  }
+export default function App() {
+  return (
+    <ul>
+      <ClassComponent href="https://www.google.com" text="go to Google" />
+      <ArrowComponent href="https://www.twitter.com" text="go to Twitter" />
+    </ul>
+  )
 }
