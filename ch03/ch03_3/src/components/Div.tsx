@@ -6,6 +6,8 @@ import type {
 } from 'react'
 
 import type { WidthHeight } from './WidthHeight'
+import type { LeftHandSideExpression } from 'typescript'
+import { LeftRightTopBottom } from './LeftRightTopBottom'
 
 export type ReactDivProps = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
@@ -13,10 +15,15 @@ export type ReactDivProps = DetailedHTMLProps<
 >
 
 export type DivProps = ReactDivProps &
-  PropsWithChildren<WidthHeight> & { src?: string }
+  PropsWithChildren<WidthHeight> & LeftRightTopBottom & { 
+    src?: string 
+  }
 
 // prettier-ignore
-export const Div: FC<DivProps> = ({width, height, style: _style, src, ...props}) => {
-    const style = {..._style, width, height, backgroundImage: src && `url(${src})`}
-    return <div {...props} style={style} /> 
+export const Div: FC<DivProps> = ({width, height, style: _style,  src, className: _className, left, right, top, bottom,...props}) => {
+
+    const style = {..._style, width, height, backgroundImage: src && `url(${src})`, left, right, top, bottom}
+    const className = ['box-sizing', src && 'bg-gray-300', _className].join(' ')
+
+    return <div {...props} className={className} style={style} /> 
 }
