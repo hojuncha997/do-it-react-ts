@@ -29,7 +29,9 @@ const Card:FC<CardProps> = ({card, ...props}) => {
             </Div>
           </Div>
           <p className="mt-4">{paragraphs}</p>
-          <Div className='flex flex-row items-center justify-between p-2 mt-2 text-red-500'>{icons}</Div>
+          <Div className='flex flex-row items-center justify-between p-2 mt-2 text-red-500'>
+            {icons}
+          </Div>
         </Div>
       </div>
     </Div>

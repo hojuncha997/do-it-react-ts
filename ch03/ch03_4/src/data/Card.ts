@@ -32,7 +32,7 @@ export const makeRandomCard = () => {
         makeRandomUser(),
         I.randomImage(800, 600),
         C.randomTitleText(),
-        C.randomParagraph(5),
+        C.randomParagraph(2),
         D.makeDayMonthYear(date),
         D.makeRelativeDate(date)
     )
