@@ -1,6 +1,6 @@
 import { Title, Avatar } from '../components'
 import * as D from '../data'
-import { useOrCreate } from './userOrCreate'
+import { useOrCreate } from './useOrCreate'
 
 export default function CreateOrUseTest() {
   // prettier-ignore
