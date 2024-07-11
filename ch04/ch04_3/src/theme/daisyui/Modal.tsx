@@ -54,11 +54,11 @@ export const ModalContent: FC<ModalContentProps> = ({
   );
 };
 
-export type ModalActionProps = ReactDivProps & {};
-export const ModalAction: FC<ModalActionProps> = ({
-  className: _className,
-  ...props
-}) => {
-  const className = ["modal-action", _className].join(" ");
-  return <div {...props} className={className} />;
-};
+// export type ModalActionProps = ReactDivProps & {};
+// export const ModalAction: FC<ModalActionProps> = ({
+//   className: _className,
+//   ...props
+// }) => {
+//   const className = ["modal-action", _className].join(" ");
+//   return <div {...props} className={className} />;
+// };
