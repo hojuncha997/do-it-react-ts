@@ -1,8 +1,20 @@
-export default function CopyMe() {
+import {useRef, useCallback}  from 'react';
+import {Title} from '../components';
+
+export default function ClickTest() {
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  const onClick = useCallback(() => inputRef.current?.click(), []);
+
   return (
     <section className="mt-4">
-      <h2 className="text-5xl font-bold text-center">Copy Me</h2>
-      <div className="mt-4"></div>
+      <Title>ClickTest</Title>
+      <div className="mt-4 flex justify-center items-center">
+        <button className='btn-primary mr-4' onClick={onClick}>
+          Click
+        </button>
+        <input ref={inputRef} className='hidden' type="file" accept="image/*" />
+      </div>
     </section>
   );
 }
